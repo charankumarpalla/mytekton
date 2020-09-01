@@ -39,14 +39,14 @@ spec:
           value: "$(params.a)"
         - name: b
           value: "$(params.b)"
-    - name: sum-and-multiply
-      taskRef:
-        name: sum
-      params:
-        - name: a
-          value: "$(tasks.multiply-inputs.results.product)$(tasks.sum-inputs.results.sum)"
-        - name: b
-          value: "$(tasks.multiply-inputs.results.product)$(tasks.sum-inputs.results.sum)"
+    # - name: sum-and-multiply
+    #   taskRef:
+    #     name: sum
+    #   params:
+    #     - name: a
+    #       value: "$(tasks.multiply-inputs.results.product)$(tasks.sum-inputs.results.sum)"
+    #     - name: b
+    #       value: "$(tasks.multiply-inputs.results.product)$(tasks.sum-inputs.results.sum)"
 
 
 
