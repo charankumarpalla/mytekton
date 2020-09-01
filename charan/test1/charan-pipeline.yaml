@@ -23,14 +23,14 @@ spec:
           value: $(params.repository)
         - name: branch
           value: $(params.branch)
-    - name: sum-inputs
-      taskRef:
-        name: sum
-      params:
-        - name: a
-          value: "$(params.a)"
-        - name: b
-          value: "$(params.b)"
+    # - name: sum-inputs
+    #   taskRef:
+    #     name: sum
+    #   params:
+    #     - name: a
+    #       value: "$(params.a)"
+    #     - name: b
+    #       value: "$(params.b)"
     - name: multiply-inputs
       taskRef:
         name: multiply
