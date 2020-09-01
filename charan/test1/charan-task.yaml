@@ -3,7 +3,18 @@ kind: Task
 metadata:
   name: charan-task
 spec:
+  params:
+    - name: repository
+      description: The git repo
+    - name: branch
+      description: the branch for the git repo
   steps:
+    - name: noshebang
+      image: ubuntu
+      script: echo "no shebang"
+    - name: print repo
+      image: ubuntu
+      script: echo "no shebang"
     - name: echo
       image: ubuntu
       command:

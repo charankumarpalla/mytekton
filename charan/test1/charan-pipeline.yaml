@@ -3,7 +3,17 @@ kind: Pipeline
 metadata:
   name: charan-pipeline
 spec:
+  params:
+    - name: repository
+      description: the git repo
+    - name: branch
+      description: the branch for the git repo
   tasks:
     - name: charan-pipeline-hello-task
       taskRef:
         name: charan-task
+      params:
+        - name: repository
+          value: $(params.repository)
+        - name: branch
+          value: $(params.branch)

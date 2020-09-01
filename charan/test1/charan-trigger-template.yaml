@@ -3,6 +3,11 @@ kind: TriggerTemplate
 metadata:
   name: charan-trigger-template
 spec:
+  params:
+    - name: repository
+      description: The git repo
+    - name: branch
+      description: the branch for the git repo
   resourcetemplates:
     - apiVersion: tekton.dev/v1alpha1
       kind: PipelineRun
@@ -11,3 +16,8 @@ spec:
       spec:
         pipelineRef:
           name: charan-pipeline
+        params:
+          - name: repository
+            value: $(params.repository)
+          - name: branch
+            value: $(params.branch)
