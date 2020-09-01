@@ -1,0 +1,13 @@
+apiVersion: tekton.dev/v1alpha1
+kind: TriggerTemplate
+metadata:
+  name: charan-trigger-template
+spec:
+  resourcetemplates:
+    - apiVersion: tekton.dev/v1alpha1
+      kind: PipelineRun
+      metadata:
+        name: charan-pipelinerun-$(uid)
+      spec:
+        pipelineRef:
+          name: charan-pipeline

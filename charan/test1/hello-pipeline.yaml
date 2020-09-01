@@ -1,0 +1,9 @@
+apiVersion: tekton.dev/v1alpha1
+kind: Pipeline
+metadata:
+  name: charan-pipeline
+spec:
+  tasks:
+    - name: charan-pipeline-hello-task
+      taskRef:
+        name: charan-task

@@ -1,0 +1,10 @@
+apiVersion: tekton.dev/v1alpha1
+kind: EventListener
+metadata:
+  name: charan-listener
+spec:
+  triggers:
+    - binding:
+        name: charan-trigger-binding
+      template:
+        name: charan-trigger-template
