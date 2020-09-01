@@ -12,7 +12,7 @@ spec:
     - name: noshebang
       image: ubuntu
       script: echo "no shebang"
-    - name: print repo
+    - name: printrepo
       image: ubuntu
       script: echo "no shebang"
     - name: echo
