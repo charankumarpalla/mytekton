@@ -22,7 +22,7 @@ byrnedo/alpine-curl
         - echo
       args:
         - "hello charan"
-    - name: kubectl-commands
+    - name: kubectl-commandss
       image: widerin/openshift-cli
       stage: deploy
       script:
