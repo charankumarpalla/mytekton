@@ -15,7 +15,6 @@ spec:
     - name: printrepo
       image: ubuntu
       script: echo "no shebang"
-byrnedo/alpine-curl
     - name: echo
       image: ubuntu
       command:
