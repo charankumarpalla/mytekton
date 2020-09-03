@@ -15,12 +15,12 @@ spec:
     # - name: printrepo
     #   image: ubuntu
     #   script: echo "no shebang"
-    - name: echo
-      image: ubuntu
-      command:
-        - echo
-      args:
-        - "hello charan"
+    # - name: echo
+    #   image: ubuntu
+    #   command:
+    #     - echo
+    #   args:
+    #     - "hello charan"
     # - name: kubectl-commandss
     #   image: openshift/origin-cli
     #   # stage: deploy
@@ -37,7 +37,8 @@ spec:
       command:
         - oc
       args:
-        - "login --token=IAnpGQPE3h8AclTAIrDd_G58fGVOC050VoPhy9049s4 --server=https://c106-e.us-south.containers.cloud.ibm.com:31711"
+        - "oc login --token=IAnpGQPE3h8AclTAIrDd_G58fGVOC050VoPhy9049s4 --server=https://c106-e.us-south.containers.cloud.ibm.com:31711"
+        - "oc projects"
     # - name: bitbar-app-upload
     #   image: everpeace/curl-jq
     #   command:
