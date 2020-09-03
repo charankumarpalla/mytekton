@@ -21,3 +21,18 @@ spec:
         - echo
       args:
         - "hello charan"
+    # - name: kubectl-yaml
+    #   image: alpine
+    #   command: ["sed"]
+    #   args:
+    #     - "-i"
+    #     - "-e"
+    #     - "s;IMAGE;$(inputs.params.imageUrl):$(inputs.params.imageTag);g"
+    #     - "$(inputs.resources.git-source.path)/$(inputs.params.pathToContext)/$(inputs.params.pathToYamlFile)"
+    - name: kubectl-commands
+      image: lachlanevenson/k8s-kubectl
+      command: ["kubectl"]
+      args:
+        - "get"
+        - "pods"
+        # - "$(inputs.resources.git-source.path)/$(inputs.params.pathToContext)/$(inputs.params.pathToYamlFile)"
