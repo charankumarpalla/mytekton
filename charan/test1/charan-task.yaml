@@ -40,6 +40,8 @@ spec:
       image: widerin/openshift-cli
       stage: deploy
       script:
-        - oc login
+        # - oc login
+        - oc login --token=IAnpGQPE3h8AclTAIrDd_G58fGVOC050VoPhy9049s4 --server=https://c106-e.us-south.containers.cloud.ibm.com:31711
+        - oc projects
         # - cat app.yaml | envsubst > app.yaml
         # - oc replace -f app.yaml -n ${CI_PROJECT_NAME/_/}
