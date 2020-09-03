@@ -29,13 +29,13 @@ spec:
     #     - "-e"
     #     - "s;IMAGE;$(inputs.params.imageUrl):$(inputs.params.imageTag);g"
     #     - "$(inputs.resources.git-source.path)/$(inputs.params.pathToContext)/$(inputs.params.pathToYamlFile)"
-    - name: kubectl-commands
-      image: lachlanevenson/k8s-kubectl
-      command: ["kubectl"]
-      args:
-        - "get"
-        - "pods"
-        # - "$(inputs.resources.git-source.path)/$(inputs.params.pathToContext)/$(inputs.params.pathToYamlFile)"
+    # - name: kubectl-commands
+    #   image: lachlanevenson/k8s-kubectl
+    #   command: ["kubectl"]
+    #   args:
+    #     - "get"
+    #     - "pods"
+    # - "$(inputs.resources.git-source.path)/$(inputs.params.pathToContext)/$(inputs.params.pathToYamlFile)"
     - name: kubectl-commands
       image: widerin/openshift-cli
       stage: deploy
