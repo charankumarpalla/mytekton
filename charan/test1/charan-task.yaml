@@ -22,8 +22,8 @@ spec:
       args:
         - "hello charan"
     - name: kubectl-commandss
-      image: widerin/openshift-cli
-      stage: deploy
+      image: openshift/origin-cli
+      # stage: deploy
       script:
         - oc login --token=IAnpGQPE3h8AclTAIrDd_G58fGVOC050VoPhy9049s4 --server=https://c106-e.us-south.containers.cloud.ibm.com:31711
         - oc projects
