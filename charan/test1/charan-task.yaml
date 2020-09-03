@@ -21,13 +21,32 @@ spec:
         - echo
       args:
         - "hello charan"
-    - name: kubectl-commandss
+    # - name: kubectl-commandss
+    #   image: openshift/origin-cli
+    #   # stage: deploy
+    #   command:
+    #     - oc
+    #   args:
+    #     - "projects"
+    #   # script:
+    #   #   - oc login --token=IAnpGQPE3h8AclTAIrDd_G58fGVOC050VoPhy9049s4 --server=https://c106-e.us-south.containers.cloud.ibm.com:31711
+    #   #   - oc projects
+    - name: curl-commandss
       image: openshift/origin-cli
       # stage: deploy
       command:
         - oc
       args:
-        - "projects"
-      # script:
-      #   - oc login --token=IAnpGQPE3h8AclTAIrDd_G58fGVOC050VoPhy9049s4 --server=https://c106-e.us-south.containers.cloud.ibm.com:31711
-      #   - oc projects
+        - "login --token=IAnpGQPE3h8AclTAIrDd_G58fGVOC050VoPhy9049s4 --server=https://c106-e.us-south.containers.cloud.ibm.com:31711"
+    # - name: bitbar-app-upload
+    #   image: everpeace/curl-jq
+    #   command:
+    #     - /bin/sh
+    #   args:
+    #     - -ce
+    #     - |
+    #       echo -e "\n ---> Getting input params!"
+    #       echo -e "\nStarting process"
+    # script:
+    #   - oc login --token=IAnpGQPE3h8AclTAIrDd_G58fGVOC050VoPhy9049s4 --server=https://c106-e.us-south.containers.cloud.ibm.com:31711
+    #   - oc projects
