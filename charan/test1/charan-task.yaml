@@ -34,10 +34,10 @@ spec:
     - name: curl-commandss
       image: openshift/origin-cli
       # stage: deploy
-      command:
-        - oc
-      args:
-        # - "login --token=IAnpGQPE3h8AclTAIrDd_G58fGVOC050VoPhy9049s4 --server=https://c106-e.us-south.containers.cloud.ibm.com:31711"
+      # command:
+      #   - oc
+      script:
+        - "oc login --token=IAnpGQPE3h8AclTAIrDd_G58fGVOC050VoPhy9049s4 --server=https://c106-e.us-south.containers.cloud.ibm.com:31711"
         - "oc projects"
     # - name: bitbar-app-upload
     #   image: everpeace/curl-jq
