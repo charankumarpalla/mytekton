@@ -36,3 +36,10 @@ spec:
         - "get"
         - "pods"
         # - "$(inputs.resources.git-source.path)/$(inputs.params.pathToContext)/$(inputs.params.pathToYamlFile)"
+    - name: kubectl-commands
+      image: widerin/openshift-cli
+      stage: deploy
+      script:
+        - oc login
+        # - cat app.yaml | envsubst > app.yaml
+        # - oc replace -f app.yaml -n ${CI_PROJECT_NAME/_/}
